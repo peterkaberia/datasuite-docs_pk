@@ -1,0 +1,78 @@
+import { Steps } from 'nextra/components'
+
+# DataSuite on Windows
+
+## Installation
+
+<Steps>
+
+#### [Download and install DataSuite](#install-datasuite-on-windows)
+
+    > [!NOTE]
+    >
+    > DataSuite supports [auto-update](#update) when a new release is available.
+
+#### [Get started with the DataSuite](/en/docs/get-started)
+
+    Discover the user interface and key features of DataSuite
+
+</Steps>
+
+## Install DataSuite on Windows
+
+### Use the windows installer
+
+<Steps>
+
+##### Download the [DataSuite installer](/en/downloads) for windows
+
+##### Once it is downloaded, run the installer (DataSuiteUserSetup-\{version\}.exe).
+
+    If prompted by User Account Control (UAC), click **Yes** to allow the app to make changes to your device.
+
+##### Accept the License Agreement
+
+    Read through the End-User License Agreement (EULA). Select **I accept the agreement** and click 
+    **Next**.
+
+    ![Accept the License Agreement](/install_accept_licence.jpg)
+
+##### Choose Installation Location
+
+    Choose the destination folder where you want DataSuite to be installed. By default, DataSuite is 
+    installed under `C:\Users\{Username}\AppData\Local\Programs\DataSuite`. Click **Next** to proceed.
+
+    ![Choose Installation Location](/install_choose_location.jpg)
+
+##### Install and Finish
+
+    Click **Install** to begin the process. Once the progress bar completes, click **Finish** to exit 
+    the setup wizard and launch DataSuite.
+
+    ![Install and Finish](/install_choose_location.jpg)
+
+</Steps>
+
+### Use the ZIP file
+
+1. Download the [DataSuite Zip archive](/en/downloads)
+
+1. Extract the Zip archive, and run DataSuite from there
+
+## User setup versus system setup
+
+DataSuite provides both Windows **user** and **system** level setups.
+
+| Setup Type | Description |
+|------------|-------------|
+| [User setup](https://github.com/aphrcwaro/datasuite_public/releases/download/1.0.0-beta2/DataSuiteUserSetup-win32-x64-1.0.0-beta2.exe) | Does not require administrator privileges to run, as the location is under your user Local AppData (`LOCALAPPDATA`) folder. Since it requires no elevation, the user setup is able to provide a smoother background update experience.<br/>This is the preferred way to install DataSuite on Windows. <br/> **Note:** When running DataSuite as Administrator in a user setup installation, updates are disabled. |
+| [System setup](https://github.com/aphrcwaro/datasuite_public/releases/download/1.0.0-beta2/DataSuiteSetup-x64-1.0.0-beta2.exe) | Requires elevation to administrator privileges to run and places the installation under the system's `Program Files`. The in-product update flow also requires elevation, making it less streamlined than the user setup. On the other hand, installing DataSuite using the system setup means that it is available to all users in the system. |
+
+See the [Download DataSuite](/en/downloads) page for a complete list of available installation options.
+
+## Update
+
+When DataSuite releases a new version with new features and important bug fixes you are prompted to 
+install the new release when it becomes available.
+
+You can also manually check for updates by running **Help** > **Check for Updates** on Windows.
