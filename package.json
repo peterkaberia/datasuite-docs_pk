@@ -10,6 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@vscode/codicons": "^0.0.44",
     "next": "^16.0.7",
     "nextra": "latest",
     "nextra-theme-docs": "latest",

@@ -1,17 +1,17 @@
 export default {
   "doc-divider": { "type": "separator", "title": "DOCUMENTATION" },
   index: {
-    title: 'Overview',
+    title: 'Aperçu',
     theme: {
       toc: false,
       layout: 'full'
     }
   },
-  setup: 'Setup',
-  'get-started': 'Get Started',
-  'data-extractor': 'Data Extractor App',
-  vaxx: 'Vaxx App',
-  rmncah: 'RMNCAH App',
+  setup: 'Installation',
+  'get-started': 'Commencer',
+  'data-extractor': 'Application Extracteur de Données',
+  vaxx: 'Application Vaxx',
+  rmncah: 'Application RMNCAH',
   supporting: {
     display: 'hidden'
   }

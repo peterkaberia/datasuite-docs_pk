@@ -10,7 +10,7 @@ export default {
   },
   docs: {
     type: 'page',
-    title: 'Documentation',
+    title: 'Documentação',
     theme: {
       copyPage: false
     }

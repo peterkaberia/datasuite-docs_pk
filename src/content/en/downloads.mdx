@@ -1,11 +1,88 @@
+import { DownloadGrid } from '../../../components/DownloadGrid'
+
 # Download DataSuite
 
-Free and built on open source. Integrated modular applications and secure data pipelines.
-
-### Windows 10 or 11
-
-| Installer Type | x64 |
-| :--- | :---: |
-| **User Installer** | [Download](https://github.com/aphrcwaro/datasuite_public/releases/download/1.0.0-beta2/DataSuiteUserSetup-win32-x64-1.0.0-beta2.exe)|
-| **System Installer** | [Download](https://github.com/aphrcwaro/datasuite_public/releases/download/1.0.0-beta2/DataSuiteSetup-x64-1.0.0-beta2.exe) |
-| **.zip Archive** | [Download](https://github.com/aphrcwaro/datasuite_public/releases/download/1.0.0-beta2/DataSuite-win32-x64-1.0.0-beta2.zip) |
+<DownloadGrid
+  items={[
+    {
+      name: 'Windows',
+      icon: '⊞',
+      primary: {
+        label: 'Windows',
+        subtext: 'Windows 10, 11',
+        href: 'https://github.com/aphrcwaro/datasuite_public/releases/download/1.0.0-beta2/DataSuiteUserSetup-win32-x64-1.0.0-beta2.exe'
+      },
+      links: [
+        {
+          label: 'User Installer',
+          options: [
+            {
+              label: 'x64',
+              href: 'https://github.com/aphrcwaro/datasuite_public/releases/download/1.0.0-beta2/DataSuiteUserSetup-win32-x64-1.0.0-beta2.exe'
+            }
+          ]
+        },
+        {
+          label: 'System Installer',
+          options: [
+            {
+              label: 'x64',
+              href: 'https://github.com/aphrcwaro/datasuite_public/releases/download/1.0.0-beta2/DataSuiteSetup-x64-1.0.0-beta2.exe'
+            }
+          ]
+        },
+        {
+          label: '.zip',
+          options: [
+            {
+              label: 'x64',
+              href: 'https://github.com/aphrcwaro/datasuite_public/releases/download/1.0.0-beta2/DataSuite-win32-x64-1.0.0-beta2.zip'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: 'Linux',
+      icon: '🐧',
+      primary: {
+        label: '.deb',
+        subtext: 'Debian, Ubuntu',
+        href: '#'
+      },
+      links: [
+        {
+          label: '.deb',
+          options: [{ label: 'x64', href: '#' }]
+        },
+        {
+          label: '.rpm',
+          options: [{ label: 'x64', href: '#' }]
+        },
+        {
+          label: '.tar.gz',
+          options: [{ label: 'x64', href: '#' }]
+        }
+      ]
+    },
+    {
+      name: 'macOS',
+      icon: '',
+      primary: {
+        label: 'Mac',
+        subtext: 'macOS 11.0+',
+        href: '#'
+      },
+      links: [
+        {
+          label: '.dmg',
+          options: [{ label: 'Universal', href: '#' }]
+        },
+        {
+          label: 'CLI',
+          options: [{ label: 'Universal', href: '#' }]
+        }
+      ]
+    }
+  ]}
+/>

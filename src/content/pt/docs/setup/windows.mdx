@@ -1,0 +1,75 @@
+import { Steps } from 'nextra/components'
+
+# DataSuite no Windows
+
+## Instalação
+
+<Steps>
+
+#### [Baixar e instalar o DataSuite](#install-datasuite-on-windows)
+
+    > [!NOTE]
+    >
+    > O DataSuite oferece suporte a [atualização automática](#update) quando uma nova versão estiver disponível.
+
+#### [Começar a usar o DataSuite](/pt/docs/get-started)
+
+    Descubra a interface do usuário e os principais recursos do DataSuite
+
+</Steps>
+
+## Instalar o DataSuite no Windows [#install-datasuite-on-windows]
+
+### Usar o instalador do Windows
+
+<Steps>
+
+##### Baixe o [instalador do DataSuite](/pt/downloads) para Windows
+
+##### Depois de baixado, execute o instalador (DataSuiteUserSetup-\{version\}.exe).
+
+    Se aparecer um aviso do Controle de Conta de Usuário (UAC), clique em **Sim** para permitir que o aplicativo faça alterações no seu dispositivo.
+
+##### Aceitar o contrato de licença
+
+    Leia o Contrato de Licença do Usuário Final (EULA). Selecione **Aceito o contrato** e clique em **Avançar**.
+
+    ![Aceitar o contrato de licença](/images/install_accept_licence.jpg)
+
+##### Escolher o local de instalação
+
+    Escolha a pasta de destino onde deseja instalar o DataSuite. Por padrão, o DataSuite é instalado em  
+    `C:\Users\{Username}\AppData\Local\Programs\DataSuite`. Clique em **Avançar** para continuar.
+
+    ![Escolher o local de instalação](/images/install_choose_location.jpg)
+
+##### Instalar e concluir
+
+    Clique em **Instalar** para iniciar o processo. Quando a barra de progresso terminar, clique em **Concluir** para fechar o assistente de instalação e iniciar o DataSuite.
+
+    ![Instalar e concluir](/images/install_datasuite.jpg)
+
+</Steps>
+
+### Usar o arquivo ZIP
+
+1. Baixe o [arquivo ZIP do DataSuite](/pt/downloads)
+
+1. Extraia o arquivo ZIP e execute o DataSuite a partir dele
+
+## Instalação de usuário versus instalação do sistema
+
+O DataSuite oferece instalações Windows em nível de **usuário** e **sistema**.
+
+| Tipo de instalação | Descrição |
+|--------------------|-----------|
+| [Instalação de usuário](https://github.com/aphrcwaro/datasuite_public/releases/download/1.0.0-beta2/DataSuiteUserSetup-win32-x64-1.0.0-beta2.exe) | Não requer privilégios de administrador para executar, pois a instalação ocorre na pasta Local AppData (`LOCALAPPDATA`). Como não requer elevação, a instalação de usuário oferece uma experiência de atualização em segundo plano mais suave.<br/>Este é o método recomendado para instalar o DataSuite no Windows.<br/> **Observação:** se o DataSuite for executado como Administrador em uma instalação de usuário, as atualizações serão desativadas. |
+| [Instalação do sistema](https://github.com/aphrcwaro/datasuite_public/releases/download/1.0.0-beta2/DataSuiteSetup-x64-1.0.0-beta2.exe) | Requer privilégios de administrador e instala o DataSuite no diretório do sistema `Program Files`. O fluxo de atualização dentro do aplicativo também requer elevação, tornando-o menos simples do que a instalação de usuário. Por outro lado, a instalação do sistema permite que todos os usuários do computador utilizem o DataSuite. |
+
+Consulte a página [Baixar DataSuite](/pt/downloads) para ver a lista completa de opções de instalação disponíveis.
+
+## Atualização [#update]
+
+Quando o DataSuite lança uma nova versão com novos recursos e correções importantes de erros, você será solicitado a instalar a nova versão quando ela estiver disponível.
+
+Você também pode verificar manualmente atualizações acessando **Ajuda** > **Verificar atualizações** no Windows.
