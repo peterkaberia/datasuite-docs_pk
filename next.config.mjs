@@ -5,8 +5,7 @@ const withNextra = nextra({
   search: {
     codeblocks: false
   },
-  defaultShowCopyCode: false,
-  unstable_shouldAddLocaleToLinks: true
+  defaultShowCopyCode: false
 })
 
 export default withNextra({
