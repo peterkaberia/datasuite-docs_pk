@@ -1,0 +1,36 @@
+import { Callout } from 'nextra/components'
+import { AutoDownload } from '@/components/AutoDownload' 
+import {HomeCards } from '@/components/HomeCards'
+
+<AutoDownload />
+
+
+
+## Get started
+
+<HomeCards
+  items={[
+    {
+      title: 'Download DataSuite',
+      description: 'Download DataSuite for Windows.',
+      href: '/en/downloads',
+      icon: 'tools'
+    },
+    {
+      title: 'Setup',
+      description: 'Install and configure DataSuite on your system.',
+      href: '/en/docs/setup',
+      icon: 'desktop-download'
+    },
+    {
+      title: 'Getting started',
+      description: 'Discover the key features of DataSuite with the step-by-step tutorial.',
+      href: '/en/docs/get-started',
+      icon: 'rocket'
+    }
+  ]}
+/>
+
+<Callout type="info">
+  **Installation blocked?** If the system installer is blocked by your IT administrator, you may need to cancel it and download the **User Setup** version instead. Check out our [Troubleshooting](/docs/troubleshooting) page for details.
+</Callout>

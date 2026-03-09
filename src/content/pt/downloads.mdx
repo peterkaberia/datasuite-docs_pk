@@ -1,11 +1,46 @@
+import { DownloadGrid } from '@/components/DownloadGrid'
+import styles from '../en/downloads.module.css'
+
+<div className={styles.cdsuiteGrid}>
+
 # Baixar DataSuite
 
-Gratuito e baseado em código aberto. Aplicações modulares integradas e pipelines de dados seguros.
+A suíte de análise autônoma. Gratuita e de código aberto.
 
-### Windows 10 ou 11
+  <DownloadGrid
+    items={[
+      {
+        name: 'Windows',
+        icon: (
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88" style={{ width: '6rem', height: '6rem', fill: '#4A8AF4' }}>
+            <path d="M0 12.402l35.687-4.86.016 34.423H0V12.402zm39.645-5.44L87.314.023v41.88H39.645V6.962zM0 45.87h35.703v34.47L0 75.48V45.87zm39.645 0h47.669v41.86l-47.669-6.66V45.87z"/>
+          </svg>
+        ),
+        primaries: [
+          { label: 'Windows', subtext: 'Windows 10, 11', href: '/pt/thank-you?dv=win64user' }
+        ],
+        links: [
+          {
+            label: 'Instalador de Usuário', 
+            options: [
+              { label: 'x64', href: '/pt/thank-you?dv=win64user' }
+            ]
+          },
+          {
+            label: 'Instalador de Sistema',
+            options: [
+              { label: 'x64', href: '/pt/thank-you?dv=win64' }
+            ]
+          },
+          {
+            label: '.zip',
+            options: [
+              { label: 'x64', href: '/pt/thank-you?dv=winzip' }
+            ]
+          }
+        ]
+      }
+    ]}
+  />
 
-| Tipo de instalador | x64 |
-| :--- | :---: |
-| **Instalador do usuário** | [Baixar](https://github.com/aphrcwaro/datasuite_public/releases/download/1.0.0-beta2/DataSuiteUserSetup-win32-x64-1.0.0-beta2.exe)|
-| **Instalador do sistema** | [Baixar](https://github.com/aphrcwaro/datasuite_public/releases/download/1.0.0-beta2/DataSuiteSetup-x64-1.0.0-beta2.exe) |
-| **Arquivo .zip** | [Baixar](https://github.com/aphrcwaro/datasuite_public/releases/download/1.0.0-beta2/DataSuite-win32-x64-1.0.0-beta2.zip) |
+</div>

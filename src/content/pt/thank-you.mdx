@@ -1,0 +1,37 @@
+import { Callout } from 'nextra/components'
+import { AutoDownload } from '@/components/AutoDownload' 
+import { HomeCards } from '@/components/HomeCards'
+
+<AutoDownload 
+  messageText="Seu download do DataSuite deve começar em breve."
+  linkText="Link de download direto."
+/>
+
+## Começar
+
+<HomeCards
+  items={[
+    {
+      title: 'Baixar DataSuite',
+      description: 'Baixe o DataSuite para Windows.',
+      href: '/pt/downloads',
+      icon: 'tools'
+    },
+    {
+      title: 'Instalação',
+      description: 'Instale e configure o DataSuite no seu sistema.',
+      href: '/pt/docs/setup',
+      icon: 'desktop-download'
+    },
+    {
+      title: 'Primeiros passos',
+      description: 'Descubra os principais recursos do DataSuite com o tutorial passo a passo.',
+      href: '/pt/docs/get-started',
+      icon: 'rocket'
+    }
+  ]}
+/>
+
+<Callout type="info">
+  **Instalação bloqueada?** Se o instalador do sistema for bloqueado pelo seu administrador de TI, pode ser necessário cancelá-lo e baixar a versão **User Setup** em vez disso. Confira nossa página de [Solução de problemas](/pt/docs/troubleshooting) para mais detalhes.
+</Callout>

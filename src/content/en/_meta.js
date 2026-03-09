@@ -22,5 +22,13 @@ export default {
       copyPage: false,
       toc: false
     }
+  },
+  'thank-you': {
+    type: 'page',
+    display: 'hidden',
+    theme: {
+      copyPage: false,
+      toc: false
+    }
   }
 }
