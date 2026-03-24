@@ -1,1 +1,104 @@
-# Page under development and coming up soon
+import { HomeCards } from '@/components/HomeCards'
+
+# Framework Overview
+
+This page summarizes the CD2030 DataSuite analytical framework using the structure described in `Data Suite Guidebook_VaxxApp (1).docx`. It is intended to help teams move from raw facility and survey data to defensible national and sub-national coverage findings.
+
+## End-to-end workflow
+
+The framework follows a practical sequence:
+
+1. Load and configure facility and survey data.
+2. Calibrate key national benchmark rates.
+3. Assess data quality before estimating coverage.
+4. Adjust incomplete, unstable, or unreliable data.
+5. Select the best-performing denominator.
+6. Interpret national, equity, and sub-national results.
+7. Use findings for planning, review, and action.
+
+See the [workflow page](/en/docs/framework/workflow) for the process view.
+
+## Framework modules
+
+<HomeCards
+  items={[
+    {
+      title: 'Data Quality Assessment',
+      description: 'Review reporting completeness, outliers, missingness, internal consistency, and annual quality scores.',
+      href: '/en/docs/framework/data-quality-assessment',
+      icon: 'checklist'
+    },
+    {
+      title: 'Data Adjustment',
+      description: 'Remove unreliable periods, apply adjustment factors, and compare values before and after cleaning.',
+      href: '/en/docs/framework/data-adjustment',
+      icon: 'settings-gear'
+    },
+    {
+      title: 'Denominator Selection',
+      description: 'Compare DHIS2, UN, ANC1-derived, and Penta1-derived denominator options.',
+      href: '/en/docs/framework/denominator-selection',
+      icon: 'symbol-number'
+    },
+    {
+      title: 'Coverage Estimation',
+      description: 'Estimate levels and trends, compare with survey benchmarks, and review progress toward targets.',
+      href: '/en/docs/framework/coverage-estimation',
+      icon: 'graph'
+    },
+    {
+      title: 'Equity Analysis',
+      description: 'Assess inequality by residence, wealth, and maternal education using survey-based comparisons.',
+      href: '/en/docs/framework/equity-analysis',
+      icon: 'graph-scatter'
+    },
+    {
+      title: 'Sub-National Analysis',
+      description: 'Examine regional and district variation, target attainment, and geographic inequality.',
+      href: '/en/docs/framework/subnational-analysis',
+      icon: 'globe'
+    }
+  ]}
+/>
+
+## Key ideas from the guidebook
+
+### Data inputs and setup
+
+The guidebook begins with loading routine health facility data, restoring saved work where needed, and connecting external survey sources. It also highlights the importance of entering calibration inputs such as ANC1 coverage, Penta1 coverage, pregnancy loss, twinning, stillbirth rate, and mortality assumptions so the analysis is aligned with recent survey evidence.
+
+### Data quality comes first
+
+Before coverage is interpreted, the guidebook recommends checking whether the data is fit for use. This includes reporting completeness, extreme outlier detection, missing data patterns, and internal consistency checks such as comparing ANC1 and Penta1 ratios.
+
+### Adjustment should be explicit
+
+Where reporting is incomplete or unstable, analysts may exclude unreliable years, apply service-specific k-factors, and impute values for missing months or corrected outliers. The emphasis is on making those decisions transparent and reviewing how much they change the resulting indicators.
+
+### Denominator choice drives credibility
+
+The framework treats denominator assessment as a core analytical step, not a technical detail. Administrative projections, UN estimates, and survey-calibrated ANC1 or Penta1 denominators should be compared, and the preferred method should be the one that best aligns with recent survey results.
+
+### National averages are not enough
+
+The guidebook places strong emphasis on both inequality and geography. National findings should be interpreted alongside equity analyses across wealth, education, and residence, as well as sub-national comparisons across regions and districts.
+
+### Analysis should support decisions
+
+The final purpose of the framework is practical use. Findings should inform country review processes, planning discussions, and technical working groups so that the analysis leads to concrete RMNCAH action rather than standing alone as a report.
+
+## Supporting pages
+
+- [Workflow](/en/docs/framework/workflow)
+- [Indicator Definitions](/en/docs/framework/indicator-definitions)
+
+## Expected outputs
+
+Teams using this framework should be able to produce:
+
+- A documented data quality assessment and summary scorecard.
+- A cleaned and adjusted facility dataset ready for analysis.
+- A justified denominator choice for coverage estimation.
+- National coverage trends compared with survey benchmarks.
+- Equity and sub-national findings that identify who and where is being left behind.
+- Evidence that can be used for planning, prioritization, and communication.
