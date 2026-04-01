@@ -3,7 +3,7 @@ import { withGitHubAlert } from 'nextra/components'
 import { HomeCards } from '@/components/HomeCards'
 import { Steps } from 'nextra/components'
 
-# CD2030 DHIS2 Data Extractor
+## CD2030 DHIS2 Data Extractor
 
 The **CD2030 DHIS2 Data Extractor** helps teams connect to DHIS2, prepare metadata, map indicators, and download routine data in a way that is more stable and easier to reproduce than manual extraction.
 
@@ -37,118 +37,20 @@ This process helps analysts produce a cleaner and more reproducible starting poi
 ### [Login to DHIS2](/en/docs/apps/data-extractor/dhis2-login)
 Connect to the correct DHIS2 instance using your server URL and valid account credentials.
 
-### Cache metadata
-Done automatically following a successful login, this loads and locally caches the metadata needed for mapping and extraction.
+### [Cache metadata](/en/docs/apps/data-extractor/dhis2-login#read-and-cache-metadata)
+Temporarily cache(store)  metadata locally for fast access and efficient downloading
 
-> [!TIP]
-> If you think the DHIS2 data might have changed since the last metadata sync, **Sync** to ensure the metadata is updated.
-
-### [Choose a mapping mode](/en/docs/apps/data-extractor/mapping)
+### [Choose a mapping mode](/en/docs/apps/data-extractor/mapping#map-metadata)
 Use Countdown mapping for the harmonized MNCH template or Custom mapping for other programs.
 
-### [Download efficiently](/en/docs/apps/data-extractor/data-download)
+### [Download data](/en/docs/apps/data-extractor/data-download)
 Run extraction with smaller requests and reuse cached metadata to minimize repeat downloads.
 </Steps>
 
-## Step 1: Log in to DHIS2
 
 
 
-## Step 2: Read and cache metadata
 
-After login, the extractor retrieves the metadata needed to understand the structure of the DHIS2 instance. This can include items such as organisation units, data elements, indicators, category option combinations, datasets, and other configuration objects required for mapping and extraction.
-
-Rather than downloading the same metadata repeatedly for every step, the extractor caches it locally for reuse during the session and in later work where appropriate.
-
-<Callout type="info">
-  **Why caching helps:** Metadata caching reduces repeated calls to DHIS2, speeds up setup for later runs, and creates a smaller download footprint because the extractor only needs to refresh what is necessary.
-</Callout>
-
-<Callout type="warning">
-  **Check before proceeding:** If the metadata in DHIS2 has changed significantly since the last session, users should refresh the metadata cache before final extraction so mapping decisions reflect the latest configuration.
-</Callout>
-
-<a id="step-3-map-metadata"></a>
-
-## Step 3: Map metadata
-
-Mapping is the stage where DHIS2 source metadata is linked to the structure needed for downstream analysis. The extractor supports two mapping approaches depending on the use case.
-
-### Countdown option
-
-The **Countdown** option maps indicators and related metadata to the **Countdown harmonized MNCH data template**. This is the preferred approach when teams are preparing data for Countdown to 2030 workflows and want a standardized structure that aligns with the embedded resource template used by the application.
-
-This option is useful when:
-
-- the analysis is focused on harmonized MNCH indicators,
-- teams want consistency across countries or time periods,
-- outputs are intended for Countdown-aligned analytical workflows.
-
-<Callout type="info">
-  **Recommended for standardization:** Use the Countdown option when your goal is to produce data aligned with the harmonized MNCH template embedded in the extractor resources.
-</Callout>
-
-### Custom option
-
-The **Custom** option allows users to create mappings for other programs or use cases that do not fit the Countdown harmonized template. This gives teams flexibility to work with country-specific program structures, additional service areas, or bespoke indicator sets.
-
-This option is useful when:
-
-- the program area goes beyond the Countdown MNCH scope,
-- users need a country-defined mapping structure,
-- the extraction supports another analytical workflow outside the standard harmonized template.
-
-<Callout type="info">
-  **Flexible mapping:** Choose the Custom option when you need to prepare data for other health programs, local reporting needs, or non-Countdown analytical pipelines.
-</Callout>
-
-<Callout type="warning">
-  **Important mapping choice:** Use Countdown mapping when standardization is the goal. Use Custom mapping when flexibility matters more than alignment to the embedded Countdown MNCH structure.
-</Callout>
-
-<a id="step-4-download-data-with-minimal-repeat-requests"></a>
-
-## Step 4: Download data with minimal repeat requests
-
-Once login, metadata retrieval, and mapping are complete, the extractor can begin data download. Instead of relying on a single large DHIS2 request, the extractor is designed to handle extraction in smaller and more manageable operations.
-
-This has several advantages:
-
-- it lowers the risk of timeouts for large requests,
-- it reduces the chance of incomplete downloads,
-- it allows previously completed work to be reused,
-- it supports a more efficient download process after metadata has already been cached.
-
-Because metadata has already been prepared and cached, the extractor can focus on the data values themselves rather than repeatedly reloading the full structural context before each extraction.
-
-<Callout type="warning">
-  **Large extractions still need planning:** Even with caching and chunked processing, very large downloads may take time depending on server performance, user permissions, internet stability, and the size of the requested organisation unit and period ranges.
-</Callout>
-
-## Step 5: Resume and reuse cached work
-
-Caching is not only useful for metadata. It also helps the extractor preserve progress and reduce unnecessary repeated work where extraction tasks are interrupted or revisited.
-
-This improves reliability in practical field conditions, especially when:
-
-- internet connectivity is unstable,
-- DHIS2 response times vary,
-- analysts need to rerun the same extract after refining mappings,
-- teams want a reproducible process with less manual repetition.
-
-<Callout type="info">
-  **Tip:** If you are testing mappings, validate the metadata and structure first using a smaller extraction range before launching a full national, multi-year download.
-</Callout>
-
-## Recommended workflow
-
-For most users, the best sequence is:
-
-1. Log in to the correct DHIS2 instance.
-2. Cache and review metadata.
-3. Choose either the Countdown or Custom mapping option.
-4. Validate the mapping before a large extraction.
-5. Run the extraction and reuse cached metadata where possible.
 
 ## Summary
 

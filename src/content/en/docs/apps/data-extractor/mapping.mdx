@@ -2,13 +2,12 @@ import { Callout } from 'nextra/components'
 import { Steps } from 'nextra/components'
 
 
-# Mapping Configuration
+## Mapping Configuration
 
-## Overview
 
 Mapping defines **what data to extract** from DHIS2 and **how it is structured** for analysis.
 It is the core step in the Data Extractor workflow in that it: fetches indicators of interest,
-maps/matches with corresponding DHIS2 data sources and standardizes outputs for Datasuite apps.
+maps/matches with corresponding DHIS2 data sources and standardizes outputs for Datasuite apps and other analyses.
 
 ## DHIS2 Data Mapping Workflow
 
@@ -81,21 +80,48 @@ Define the mapping name, Description and the mapping mode
     Description: MNH Indicators for CAM 2026 Workshop
 </Callout>
 
+<a id="map-metadata"/>
 ### Select the Mapping mode
-There are currently two mapping modes:
-- Countdown â†’ This mode has a predefined list of MNCH indicators and structure as in the [harmonized data template](/en/resources)
-- Custom â†’ Fully user-defined configuration, where the user can download any data that they have access rights to
+</Steps>
+Mapping is the stage where DHIS2 source metadata is linked to the structure needed for downstream analysis. 
+The extractor supports two mapping approaches depending on the use case.
+### 1. Countdown option
 
-<Callout type="warning">
-  **Warning:** Changing the mapping mode midway will reset your progress if the mapping is not saved.
-     Always save your mapping before switching modes
+The **Countdown** option maps indicators and related metadata to the **Countdown harmonized MNCH [data template](/en/resources)**. 
+This is the preferred approach when teams are preparing data for Countdown to 2030 workflows and want a standardized structure that aligns with the embedded resource template used by the application.
+
+This option is useful when:
+
+- the analysis is focused on harmonized MNCH indicators,
+- teams want consistency across countries or time periods,
+- outputs are intended for Countdown-aligned analytical workflows.
+
+<Callout type="info">
+  **Recommended for standardization:** Use the Countdown option when your goal is to produce data aligned with the harmonized MNCH template embedded in the extractor resources.
 </Callout>
 
+### 2. Custom option
+
+The **Custom** option allows users to create mappings for other programs or use cases that do not fit the Countdown harmonized template. This gives teams flexibility to work with country-specific program structures, additional service areas, or bespoke indicator sets.
+
+This option is useful when:
+
+- The program area goes beyond the Countdown MNCH scope,
+- Users need a country-defined mapping structure,
+- The extraction supports another analytical workflow outside the standard [harmonized template](/en/resources).
+
+<Callout type="info">
+  **Flexible mapping:** Choose the Custom option when you need to prepare data for other health programs, local reporting needs, or non-Countdown analytical pipelines.
+</Callout>
+
+<Callout type="info">
+**Mapping Summary**
+There are currently two mapping modes:
+- Countdown: This mode has a predefined list of MNCH indicators and structure as in the [harmonized data template](/en/resources)
+- Custom:  Fully user-defined configuration, where the user can download any data that they have access rights to
+**Warning:** 
+- Changing the mapping mode midway will reset your progress if the mapping is not saved.Always save your mapping before switching Mapping modes
+</Callout>
+
+
 ### Indicators Configuration
-
-
-</Steps>
-
-
-
-Mapping Mode
