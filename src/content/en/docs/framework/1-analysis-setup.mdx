@@ -21,7 +21,9 @@ The app accepts common tabular data formats for the DHIS2 upload:
 - Excel workbook: `.xlsx` or `.xls`
 - Comma-separated values: `.csv`
 
-
+<Callout type="info">
+- The DHIS2 data indicators are defined [here](/en/docs/framework/8-indicator-definitions).
+</Callout>
 ### Automatic RDS creation[#rds]
 
 - When you load an Excel file for the first time, the app automatically converts and saves a companion `.rds` file in the same working folder.
@@ -29,6 +31,8 @@ The app accepts common tabular data formats for the DHIS2 upload:
 
 This means the first load may take slightly longer while the Excel file is read and transformed. After that, the app opens the saved `.rds` file much faster.
 </Steps>
+
+
 ---
 ### Embedded datasets
 
@@ -82,3 +86,4 @@ Because these datasets are named according to the country whose DHIS2 data is lo
 | `Recent survey Year` | The calendar year in which the survey was conducted and from which vaccine coverage estimates (e.g., BCG, Penta1/3, Measles1) are drawn. (Example: If the survey was conducted in 2022, that is the vaccine survey year). |
 | `Survey Data Start Year` | The calendar year from which the survey data starts. This is used to determine the time period for which the survey data is relevant. Ideally, it is recommended to use the two most recent surveys for this analysis.(Example: If a country has survey data for 2008, 2013, 2018 and 2023; the Survey data start should be 2018 (two most recent)). |
 ---
+

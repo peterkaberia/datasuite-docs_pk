@@ -7,6 +7,14 @@ export default {
       toc: true
     }
   },
+  "0-workflow": {
+    title: "Workflow Overview",
+    theme: {
+      layout: 'full',
+      copyPage: false,
+      toc: true
+    }
+  },
   "1-analysis-setup": {
     title: "Analysis Setup",
     theme: {
