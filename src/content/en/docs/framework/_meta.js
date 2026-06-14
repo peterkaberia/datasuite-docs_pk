@@ -103,5 +103,13 @@ export default {
       copyPage: false,
       toc: true
     }
-  }, 
+  },
+  "12-dissemination": {
+    title: "Planning for Dissemination, Decisions & Action",
+    theme: { 
+      layout: 'full', 
+      copyPage: false,
+      toc: true
+    } 
+}
 }
