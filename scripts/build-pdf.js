@@ -14,6 +14,14 @@ files.sort().forEach((file) => {
   .replace(/^import .*$/gm, "")   // Remove import statements
   .replace(/^export .*$/gm, "")   // Remove export statements
   .replace(/!\[.*?\]\(.*?\)/g, "")  // Remove image references
+  //Replace Unicode symbols
+  .replace(/≥/g, ">=")
+  .replace(/≤/g, "<=")
+  .replace(/→/g, "->")
+  .replace(/←/g, "<-")
+  .replace(/×/g, "x")
+  .replace(/–/g, "-")
+  .replace(/—/g, "-")
   // Remove JSX tags
   .replace(/<[^>]+>/g, "") 
   .replace(/<Callout[\s\S]*?<\/Callout>/g, "")
