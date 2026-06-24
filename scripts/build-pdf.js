@@ -15,7 +15,7 @@ let content = fs.readFileSync(file, "utf8");
 
 content = content
 
-```
+
 // Remove frontmatter
 .replace(/^---[\s\S]*?---/gm, "")
 
@@ -57,7 +57,6 @@ content = content
 // Remove emphasis markers that frequently break LaTeX
 .replace(/\*\*/g, "")
 .replace(/\*/g, "");
-```
 
 // Add section separator and source filename
 output += "\n\n---\n\n";
