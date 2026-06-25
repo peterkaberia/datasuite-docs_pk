@@ -15,17 +15,14 @@ export default {
   "getting-started":"Getting Started",
  
   framework: "Analytical Framework",
-  
+
   methods: {
     title: "Methods",
     display: "hidden"
   },
+  
   supporting: {
     title: "Supporting Resources",
-    display: "hidden"
-  },
-  outputs: {
-    title: "Outputs & Reporting",
     display: "hidden"
   }
 }

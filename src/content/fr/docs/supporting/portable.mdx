@@ -1,76 +1,71 @@
-# Mode portable
+# Portable mode
 
-DataSuite prend en charge le [mode portable](https://en.wikipedia.org/wiki/Portable_application).
-Ce mode permet à toutes les données créées et gérées par DataSuite d’être stockées à proximité de l’application,
-afin qu’elles puissent être déplacées entre différents environnements.
+DataSuite supports [Portable mode](https://en.wikipedia.org/wiki/Portable_application). 
+This mode enables all data created and maintained by DataSuite to live near itself, so it 
+can be moved around across environments.
 
-Le mode portable est pris en charge via le téléchargement ZIP pour Windows.
-Consultez la [page de téléchargement](/fr/downloads) pour trouver le fichier `.zip` approprié pour votre plateforme.
+Portable mode is supported on the ZIP download for Windows. See the [Download page](/en/downloads) 
+to find the correct `.zip` file for your platform.
 
 > [!IMPORTANT]
 >
-> N’essayez pas de configurer le mode portable sur une installation provenant des installateurs Windows utilisateur
-> ou système. Le mode portable est uniquement pris en charge avec l’archive ZIP (.zip) de Windows.
-> Notez également que l’archive ZIP Windows ne prend pas en charge la mise à jour automatique.
+> Do not attempt to configure portable mode on an installation from the **Windows User or 
+System installers**. Portable mode is only supported on the Windows ZIP (`.zip`) archive. Note 
+also that the Windows ZIP archive does not support auto update.
 
-## Activer le mode portable
+## Enable Portable mode
 
 ### Windows
 
-Après avoir décompressé le téléchargement DataSuite, créez un dossier `data` dans le dossier de DataSuite :
+After unzipping the DataSuite download, create a `data` folder within DataSuite's folder:
 
 ```
 |- DataSuite-win32-x64-1.0.0
-|  |- Suite.exe
-|  |- data
-|  |- bin
-|  |  |- code
-|  |  |- ...
-|  |- ...
+|   |- Suite.exe (or code executable)
+|   |- data
+|   |- bin
+|   |  |- code
+|   |  |- ...
+|   |- ...
 ```
 
-À partir de ce moment, le dossier `data` sera utilisé pour contenir toutes les données DataSuite,
-y compris l’état de session, les préférences, etc.
+From then on, the `data` folder will be used to contain all DataSuite data, including session 
+state, preferences, etc.
 
-Le dossier `data` peut être déplacé vers d’autres installations de DataSuite.
-Ceci est utile lors de la mise à jour de votre version portable de DataSuite,
-auquel cas vous pouvez déplacer le dossier `data` vers une version plus récente extraite de DataSuite.
+The `data` folder can be moved to other DataSuite installations. This is useful for updating your 
+portable DataSuite version, in which case you can move the `data` folder to a newer extracted version 
+of DataSuite.
 
-## Mettre à jour DataSuite portable
+## Update Portable DataSuite
 
-Sous Windows, vous pouvez mettre à jour DataSuite en copiant le dossier `data`
-dans une version plus récente de DataSuite.
+On **Windows**, you can update DataSuite by copying the `data` folder over to a more recent version 
+of DataSuite.
 
-## Migrer vers le mode portable
+## Migrate to Portable mode
 
-Vous pouvez également migrer une installation existante vers le mode portable.
+You can also migrate an existing installation to Portable mode.
 
 ### Windows
 
-1. Téléchargez la distribution ZIP de DataSuite pour votre plateforme.
-2. Créez le dossier `data` comme indiqué ci-dessus.
-3. Copiez le répertoire de données utilisateur `DataSuite` dans `data`
-   et renommez-le en `user-data`.
+1. Download the [DataSuite](/en/downloads) ZIP distribution for your platform.
+2. Create the `data` folder as above.
+3. Copy the user data directory `DataSuite` to `data` and rename it to `user-data`:
+    * **Windows** `%APPDATA%\DataSuite`
 
-   Windows location:
-   %APPDATA%\DataSuite
-
-Exemple :
+As an example, here's the desired outcome on **Windows**:
 
 ```
 |- DataSuite-win32-x64-1.84.2
-|  |- DataSuite.exe
-|  |- data
-|  |  |- user-data
-|  |  |  |- ...
-|  |- ...
+|   |- DataSuite.exe (or suite executable)
+|   |- data
+|   |   |- user-data
+|   |   |   |- ...
+|   |- ...
 ```
 
-## Répertoire TMP
+## TMP directory
 
-Par défaut, le répertoire TMP reste celui du système même en mode portable,
-car aucun état n’y est conservé.
-
-Si vous souhaitez également que votre répertoire TMP soit situé dans votre répertoire portable,
-vous pouvez créer un dossier `tmp` vide à l’intérieur du dossier `data`.
-Tant qu’un dossier `tmp` existe, il sera utilisé pour les données TMP.
+By default, the default `TMP` directory is still the system one even in Portable Mode, since no state 
+is kept there. If you want to also have your TMP directory within your portable directory, you can create
+ an empty `tmp` directory inside the `data` folder. As long as a `tmp` directory exists, it will be used 
+ for TMP data.

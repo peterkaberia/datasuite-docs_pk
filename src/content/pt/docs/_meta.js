@@ -1,18 +1,19 @@
 export default {
-  "doc-divider": { "type": "separator", "title": "DOCUMENTAÇÃO" },
+  "doc-divider": { "type": "separator", "title": "DOCUMENTATION" },
+
   index: {
     title: 'Visão geral',
     theme: {
-      toc: false,
       layout: 'full'
     }
   },
-  setup: 'Instalação',
-  'get-started': 'Primeiros passos',
-  'data-extractor': 'Aplicação Extrator de Dados',
-  vaxx: 'Aplicação Vaxx',
-  rmncah: 'Aplicação RMNCAH',
-  supporting: {
-    display: 'hidden'
+
+  "getting-started": "Introdução",
+
+  framework: "Estrutura analítica",
+
+  methods: {
+    title: "Métodos",
+    display: "hidden"
   }
 }

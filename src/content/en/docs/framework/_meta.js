@@ -55,6 +55,14 @@ export default {
       toc: true
     }
   },
+  "5.1-bayesian-coverage": {
+    title: "Bayesian Coverage Estimation",
+    theme: {
+      layout: 'full',
+      copyPage: false,
+      toc: true
+    }
+  },
   "6-equity-analysis": {
     title: "Equity Analysis",
     theme: {
@@ -111,5 +119,13 @@ export default {
       copyPage: false,
       toc: true
     } 
-}
+},
+"13-ai-leverage": {
+    title: "Leveraging AI for Analysis",
+    theme: {
+      layout: 'full',
+      copyPage: false,
+      toc: true
+    }
+  },
 }
